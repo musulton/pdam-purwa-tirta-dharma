@@ -1,0 +1,88 @@
+.news-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 83px 70px;
+}
+
+.news-title {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 38px;
+  color: #3F3F3F;
+  margin: 0;
+}
+
+.news-subtitle {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  color: #3F3F3F;
+  margin: 12px 0;
+}
+
+.news-content-container {
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 36px;
+}
+
+.news-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.news-card-wrapper {
+  margin: 0px 30px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #EFEFEF;
+  padding: 30px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+}
+
+.news-content {
+  width: 298px;
+
+  background: #EFEFEF;
+  border-radius: 8px;
+}
+
+.news-content-title {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+
+  color: #000000;
+  margin: 12px 0;
+}
+
+.news-content-photo {
+  width: 309px;
+  height: 298px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .news-content-container {
+    display: block;
+  }
+
+  .news-content-wrapper {
+    margin-top: 10px;
+  }
+}

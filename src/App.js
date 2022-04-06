@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
+import About from './modules/About';
+import ChooseUs from './modules/ChooseUs';
+import Contact from './modules/Contact';
+import Footer from './modules/Footer';
+import Header from './modules/Header';
+import NavBar from './modules/NavBar';
+import News from './modules/News';
+import Product from './modules/Product';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <NavBar />
+      <Header />
+      <ChooseUs />
+      <News />
+      <Product />
+      <About />
+      <Contact />
+      <Footer />
     </div>
-  );
+  )
 }
 
 export default App;

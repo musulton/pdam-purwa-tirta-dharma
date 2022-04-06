@@ -1,0 +1,13 @@
+.product-image {
+  width: 125px;
+  height: 172px;
+  margin: auto;
+}
+
+.product-image-wrapper {
+  padding: 85px 0px;
+}
+
+.carousel .control-dots .dot {
+  background-color: black;
+}

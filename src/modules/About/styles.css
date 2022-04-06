@@ -1,0 +1,91 @@
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 55px 113px;
+}
+
+.middle-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 80px;
+}
+
+.about-title {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+
+  color: #000000;
+}
+
+.about-subtitle-wrapper {
+  background-color: #FFF;
+  width: 529px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 10px 40px;
+}
+
+.about-subtitle {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 48px;
+}
+
+.photo-wrapper {
+  width: 529px;
+  height: auto;
+}
+
+.photo {
+  width: 487px;
+  height: 580px;
+  margin-bottom: 17px;
+}
+
+.photo-name {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  margin: 0;
+}
+
+.photo-job {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  margin: 0;
+}
+
+blockquote h1:before { 
+  content: '"';
+  font-weight: bold;
+  font-size: 100px;
+  color: #000000;
+}
+
+.about-title-wrapper {
+  display: flex;
+  align-items: flex-end;
+}
+
+@media only screen and (max-width: 1200px) {
+  .middle-section {
+    display: block;
+    text-align: center;
+  }
+
+  .photo-wrapper {
+    width: 100%;
+  }
+}
