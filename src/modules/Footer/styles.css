@@ -2,7 +2,7 @@
   display: flex;
   min-height: 579px;
   background-color: #157599;
-  padding: 80px 180px;
+  padding: 0 160px;
   align-items: center;
 }
 
@@ -99,6 +99,7 @@
 @media only screen and (max-width: 1200px) {
   .footer-container {
     display: block;
+    padding: 80px 180px 0px 180px;
   }
 
   .footer-about {
