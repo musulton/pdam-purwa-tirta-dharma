@@ -55,6 +55,10 @@
   .contact-title {
     font-size: 30px;
   }
+
+  .contact-circle {
+    margin-left: 0;
+  }
   
   .contact-subtitle {
     font-size: 18px;
