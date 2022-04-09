@@ -15,6 +15,18 @@ const Button = () => (
   </div>
 )
 
+const Menu = () => (
+  <>
+    <ul>
+      <li><a className="link" href="#home">Beranda</a></li>
+      <li><a className="link" href="#about">Tentang</a></li>
+      <li><a className="link" href="#gallery">Galeri</a></li>
+      <li><a className="link" href="#blog">Blog</a></li>
+    </ul>
+    <Button />
+  </>
+)
+
 const NavBar = () => {
   const [navColor, setNavColor] = React.useState("transparent");
   const [smallScreen, setSmallScreen] = React.useState(false);
@@ -26,7 +38,7 @@ const NavBar = () => {
   };
 
   const listenResizeEvent = () => {
-    window.innerWidth > 1100 ? setSmallScreen(false) : setSmallScreen(true);
+    window.innerWidth < 1100 ? setSmallScreen(true) : setSmallScreen(false);
   };
 
   const toggleNav = () => {
@@ -34,6 +46,9 @@ const NavBar = () => {
   };
 
   React.useEffect(() => {
+    // For Mobile
+    listenResizeEvent();
+
     window.addEventListener("scroll", listenScrollEvent);
     window.addEventListener('resize', listenResizeEvent);
     return () => {
@@ -63,17 +78,8 @@ const NavBar = () => {
         </button>
       </div>
       <nav className="navbar-right-section">
-        {(toggleMenu || !smallScreen) && (
-          <>
-            <ul>
-              <li><a className="link" href="#home">Beranda</a></li>
-              <li><a className="link" href="#about">Tentang</a></li>
-              <li><a className="link" href="#gallery">Galeri</a></li>
-              <li><a className="link" href="#blog">Blog</a></li>
-            </ul>
-            <Button />
-          </>
-        )}
+        {(smallScreen && toggleMenu) && <Menu />}
+        {!smallScreen && <Menu />}
       </nav>
     </div>
   );

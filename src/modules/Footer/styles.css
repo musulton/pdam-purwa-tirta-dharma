@@ -96,8 +96,33 @@
   flex: 1.5;
 }
 
-@media only screen and (max-width: 1100px) {
+@media  (max-width: 1100px) {
   .footer-alignment {
     flex-direction: column;
+  }
+
+  .footer-about-text {
+    font-size: 18px;
+  }
+
+  .footer-about-title {
+    font-size: 24px;
+  }
+
+  .contact-info {
+    font-size: 14px;
+  }
+
+  .contact-wrapper {
+    align-items: center;
+  }
+
+  .footer-section-wrapper a {
+    font-size: 16px;
+  }
+
+  .footer-social-media {
+    height: auto;
+    width: 20px;
   }
 }

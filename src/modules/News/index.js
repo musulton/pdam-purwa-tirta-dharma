@@ -53,8 +53,10 @@ const Content = () => (
 
 const News = () => (
   <div className="news-container">
-    <h1 className="news-title">Ikuti Pengumuman Terbaru Kami</h1>
-    <p className="news-subtitle">Jangan sampai ketinggalan pengumuman hingga berita terbaru kami</p>
+    <div className="news-text-container">
+      <h1 className="news-title">Ikuti Pengumuman Terbaru Kami</h1>
+      <p className="news-subtitle">Jangan sampai ketinggalan pengumuman hingga berita terbaru kami</p>
+    </div>
     <Content />
   </div>
 )

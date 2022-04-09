@@ -25,8 +25,8 @@ const BoxSubtitle = styled.p`
 
   color: ${(props) => props.color};
 
-  @media only screen and (max-width: 1100px) { 
-    font-size: 20px;
+  @media  (max-width: 1100px) { 
+    font-size: 16px;
   }
 `
 
