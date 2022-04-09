@@ -1,8 +1,8 @@
 import * as React from "react";
 
 import './styles.css';
-import pdamLogo from "../../assets/logoWhite.png";
-import searchIcon from "../../assets/searchIcon.png";
+import pdamLogo from "../../assets/pdamLogo3.svg";
+import searchIcon from "../../assets/search.svg";
 
 const Button = () => (
   <div className="wrapper-button">
@@ -17,30 +17,64 @@ const Button = () => (
 
 const NavBar = () => {
   const [navColor, setNavColor] = React.useState("transparent");
+  const [smallScreen, setSmallScreen] = React.useState(false);
+  const [scrolling, setScrolling] = React.useState(false);
+  const [toggleMenu, setToggleMenu] = React.useState(false);
+
   const listenScrollEvent = () => {
-    window.scrollY > 10 ? setNavColor("#157599") : setNavColor("transparent");
+    window.scrollY > 10 ? setScrolling(true) : setScrolling(false);
+  };
+
+  const listenResizeEvent = () => {
+    window.innerWidth > 1100 ? setSmallScreen(false) : setSmallScreen(true);
+  };
+
+  const toggleNav = () => {
+    setToggleMenu(!toggleMenu)
   };
 
   React.useEffect(() => {
     window.addEventListener("scroll", listenScrollEvent);
+    window.addEventListener('resize', listenResizeEvent);
     return () => {
       window.removeEventListener("scroll", listenScrollEvent);
+      window.removeEventListener("resize", listenResizeEvent);
     };
   }, []);
+
+  React.useEffect(() => {
+    scrolling || smallScreen ? setNavColor("#157599") : setNavColor("transparent");
+  }, [smallScreen, scrolling])
 
   return (
     <div
       className="navbar"
       style={{ backgroundColor: navColor }}
     >
-      <img src={pdamLogo} />
-      <ul>
-        <li><a className="link" href="#home">Beranda</a></li>
-        <li><a className="link" href="#about">Tentang</a></li>
-        <li><a className="link" href="#gallery">Galeri</a></li>
-        <li><a className="link" href="#blog">Blog</a></li>
-      </ul>
-      <Button />
+      <div className="navbar-left-section">
+        <img src={pdamLogo} />
+        <button
+          className="navbar-menu-button"
+          onClick={toggleNav}
+        >
+          <div></div>
+          <div></div>
+          <div></div>
+        </button>
+      </div>
+      <nav className="navbar-right-section">
+        {(toggleMenu || !smallScreen) && (
+          <>
+            <ul>
+              <li><a className="link" href="#home">Beranda</a></li>
+              <li><a className="link" href="#about">Tentang</a></li>
+              <li><a className="link" href="#gallery">Galeri</a></li>
+              <li><a className="link" href="#blog">Blog</a></li>
+            </ul>
+            <Button />
+          </>
+        )}
+      </nav>
     </div>
   );
 }

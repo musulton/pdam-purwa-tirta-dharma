@@ -11,3 +11,11 @@
 .carousel .control-dots .dot {
   background-color: black;
 }
+
+
+@media only screen and (max-width: 850px) {
+  .product-image {
+    max-height: 100px;
+    margin: auto;
+  }
+}

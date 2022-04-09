@@ -1,5 +1,5 @@
 .contact-container {
-  width: 904px;
+  width: 60%;
   height: 478px;
   display: flex;
   justify-content: center;
@@ -11,14 +11,13 @@
 .contact-circle {
   width: 207px;
   height: 207px;
+  margin-left: 25px;
 }
 
 .contact-title {
   font-family: Quicksand;
   font-size: 40px;
   font-weight: 700;
-  line-height: 50px;
-  letter-spacing: 0em;
   text-align: left;
   color: black;
 }
@@ -27,8 +26,6 @@
   font-family: Quicksand;
   font-size: 20px;
   font-weight: 400;
-  line-height: 25px;
-  letter-spacing: 0em;
   text-align: left;
   color: black;
   margin: 32px 0px;
@@ -39,13 +36,27 @@
   flex-direction: row;
 }
 
-
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 850px) {
   .contact-container {
-    display: block;
+    flex-direction: column-reverse;
+    height: auto;
   }
 
-  .contact-circle {
-    display: none;
+  .contact-button-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .contact-button-wrapper button:first-child {
+    margin-bottom: 10px;
+  }
+
+  .contact-title {
+    font-size: 30px;
+  }
+  
+  .contact-subtitle {
+    font-size: 18px;
   }
 }

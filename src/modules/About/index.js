@@ -10,10 +10,10 @@ const Photo = () => (
 )
 
 const KnowUs = () => (
-  <div>
+  <div className="about-knowus-container">
     <div className="about-title-wrapper">
       <blockquote><h1/></blockquote>
-      <h1 className="about-title">Mari Kenali Kami<br/>dan Perjalanan Kami</h1>
+      <h1 className="about-title">Mari Kenali Kami dan Perjalanan Kami</h1>
     </div>
     <div className="about-subtitle-wrapper">
       <p className="about-subtitle">
@@ -27,7 +27,6 @@ const About = () => (
   <div className="about-container">
     <div className="middle-section">
       <KnowUs />
-      <div style={{ width: 131 }} />
       <Photo />
     </div>
     <button className="button button-secondary button-medium">Lebih Lengkap</button>

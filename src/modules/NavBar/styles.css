@@ -10,6 +10,10 @@
   line-height: 22px;
 }
 
+.navbar-menu-button {
+  display: none;
+}
+
 .navbar {
   z-index: 999;
   width: 100%;
@@ -53,7 +57,7 @@
 }
 
 .customer-button {
-  width: 202px;
+  width: 100%;
   height: 42px;
 
   font-family: 'Quicksand';
@@ -61,4 +65,54 @@
   font-weight: 700;
   font-size: 18px;
   color: #157599;
+}
+
+.navbar-left-section {
+  display: flex;
+  flex: 1;
+}
+
+.navbar-right-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex: 2;
+}
+
+.navbar-menu-button div {
+  width: 40px;
+  height: 4px;
+  border-radius: 3px;
+  background-color: #157599;
+  margin: 4px 0;
+}
+
+@media screen and (max-width: 1100px) {
+  .navbar {
+    display: block;
+    height: auto;
+    padding: 15px;
+  }
+
+  .navbar-right-section {
+    display: block;
+  }
+
+  .navbar-right-section li {
+    display: block;
+    margin: 15px 0;
+  }
+
+  .navbar-menu-button {
+    display: block;
+    color: #157599;
+    border-radius: 10%;
+    border-width: 0;
+  }
+
+  .navbar-left-section {
+    display: flex;
+    justify-content: space-between;
+  }
 }

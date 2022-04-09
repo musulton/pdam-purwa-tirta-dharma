@@ -1,14 +1,14 @@
 import "./styles.css";
 import pdamLogo from "../../assets/pdamLogo2.svg";
-import whatsapp from "../../assets/whatsapp.png";
-import marker from "../../assets/marker.png";
-import mail from "../../assets/mail.png";
-import fb from "../../assets/fb.png"
-import ig from "../../assets/ig.png"
-import twitter from "../../assets/twitter.png"
-import youtube from "../../assets/youtube.png"
+import whatsapp from "../../assets/whatsapp.svg";
+import marker from "../../assets/marker.svg";
+import mail from "../../assets/mail.svg";
+import facebook from "../../assets/facebook.svg"
+import instagram from "../../assets/instagram.svg"
+import twitter from "../../assets/twitter.svg"
+import youtube from "../../assets/youtube.svg"
 
-const ICON = [fb, twitter, ig, youtube];
+const ICON = [facebook, twitter, instagram, youtube];
 
 const CONTACT = [
   { text: 'Jl. Gajah Mada No.3, Jetis Selatan, Purwodadi, Kec. Purwodadi, Kabupaten Grobogan, Jawa Tengah 58111', icon: marker },
@@ -57,9 +57,11 @@ const Contact = () => (
 
 const Footer = () => (
   <div className="footer-container">
-    <AboutMe />
-    <Navigation />
-    <Contact />
+    <div className="footer-alignment">
+      <AboutMe />
+      <Navigation />
+      <Contact />
+    </div>
   </div>
 )
 

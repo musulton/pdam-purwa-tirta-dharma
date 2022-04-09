@@ -11,12 +11,9 @@ const Box = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  height: 331px;
+  min-height: 200px;
+  max-height: 320px;
   background-color: ${(props) => props.bgColor};
-
-  @media only screen and (max-width: 1200px) {
-    padding-top: 25px;
-  }
 `
 
 const BoxSubtitle = styled.p`
@@ -24,9 +21,13 @@ const BoxSubtitle = styled.p`
   font-style: normal;
   font-weight: 400;
   font-size: 25px;
-  line-height: 31px;
+  margin: 0;
 
   color: ${(props) => props.color};
+
+  @media only screen and (max-width: 1100px) { 
+    font-size: 20px;
+  }
 `
 
 const CardBox = ({
@@ -56,9 +57,11 @@ const CardTitle = () => (
 const ChooseUs = () => (
   <div className="box-container">
     <CardTitle />
-    <CardBox bgColor="#157599" text="Profesional" img={icon1} />
-    <CardBox bgColor="#2093BE" text="24H Nonstop" img={icon2} />
-    <CardBox bgColor="#2EB3E6" text="Full Support" img={icon3} />  
+    <div className="box-item">
+      <CardBox bgColor="#157599" text="Profesional" img={icon1} />
+      <CardBox bgColor="#2093BE" text="24H Nonstop" img={icon2} />
+      <CardBox bgColor="#2EB3E6" text="Full Support" img={icon3} />
+    </div>
   </div>
 )
 

@@ -1,25 +1,25 @@
 import "./styles.css";
-import phoneIcon from "../../assets/phone.png"
-import socialMedia from "../../assets/socialMedia.png"
-import fb from "../../assets/fb.png"
-import ig from "../../assets/ig.png"
-import twitter from "../../assets/twitter.png"
-import youtube from "../../assets/youtube.png"
+import phone from "../../assets/phone.svg"
+import socialMedia from "../../assets/socialMedia.svg"
+import facebook from "../../assets/facebook.svg"
+import instagram from "../../assets/instagram.svg"
+import twitter from "../../assets/twitter.svg"
+import youtube from "../../assets/youtube.svg"
 
-const ICON = [socialMedia, fb, ig, twitter, youtube];
+const ICON = [socialMedia, facebook, instagram, twitter, youtube];
 
 const Header = () => (
   <header className="header">
     <div className="header-container">
-      <div>
+      <div className="header-text">
         <h1 className="header-title">
           Menjadi Perusahaan<br/>Air Minum Modern
         </h1>
         <p className="header-subtitle">
-          Lorem ipsum dolor sit amet, consectetur<br/>adipiscing elit, sed do eiusmod tempor<br/>incididunt ut labore et dolore
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         </p>
         <button className="header-button">
-          <img className="header-icon" src={phoneIcon} />
+          <img className="header-icon" src={phone} />
           Hubungi Kami
         </button>
       </div>

@@ -9,10 +9,9 @@
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
-  line-height: 38px;
+  margin: 0;
 
   color: #3f3f3f;
-  margin-bottom: 12px;
 }
 
 .card-wrapper {
@@ -29,9 +28,18 @@
   display: flex;
 }
 
+.box-item {
+  display: flex;
+  flex: 2
+}
 
-@media only screen and (max-width: 1200px) {
+
+@media only screen and (max-width: 1100px) {
   .box-container {
     flex-direction: column;
+  }
+
+  .box-title {
+    font-size: 24px;
   }
 }
